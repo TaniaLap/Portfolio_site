@@ -1,17 +1,16 @@
 body {
+    background-color: #282828;
+    color: white;
     font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 10px;
-    padding: 10px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Встановлює сітку з мінімальною шириною для елемента */
+    grid-gap: 10px; /* Відступи між зображеннями */
+    padding: 20px;
 }
 
 .grid-item {
@@ -21,21 +20,20 @@ body {
 
 .grid-item img {
     width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-.grid-item img:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+.grid-item:hover img {
+    transform: scale(1.1);
 }
 
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
-    padding-top: 100px;
+    padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
@@ -47,19 +45,18 @@ body {
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
-    max-height: 80%;
+    width: 80%;
+    max-width: 700px;
 }
 
 .close {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 35px;
     color: #fff;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .close:hover,
