@@ -1,11 +1,9 @@
-// Ініціалізація Masonry після завантаження всіх зображень
-document.addEventListener('DOMContentLoaded', function() {
-    var grid = document.querySelector('.portfolio');
+document.addEventListener("DOMContentLoaded", function() {
+    var grid = document.querySelector('.grid');
     var msnry = new Masonry(grid, {
-        // options
         itemSelector: '.grid-item',
         columnWidth: '.grid-item',
         percentPosition: true,
-        gutter: 10
+        gutter: 10 // Відступ між елементами
     });
 });
