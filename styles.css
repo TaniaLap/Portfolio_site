@@ -1,25 +1,11 @@
-body {
-    background-color: #282828;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.portfolio {
-    margin: 20px;
-}
-
-.grid-item {
-    margin-bottom: 10px;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
+// Ініціалізація Masonry після завантаження всіх зображень
+document.addEventListener('DOMContentLoaded', function() {
+    var grid = document.querySelector('.portfolio');
+    var msnry = new Masonry(grid, {
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true,
+        gutter: 10
+    });
+});
