@@ -10,15 +10,18 @@ body {
 }
 
 .grid {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1500px; /* Змінено максимальну ширину галереї */
     margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .grid-item {
     margin-bottom: 10px;
-    width: 30%; /* Встановлюємо ширину елемента у відсотках */
     display: inline-block;
+    width: calc(33.333% - 20px); /* Зменшення простору між елементами */
+    cursor: pointer; /* Додаємо вказівник */
 }
 
 .grid-item img {
@@ -26,4 +29,21 @@ body {
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Додаємо анімацію при наведенні */
+}
+
+.grid-item img:hover {
+    transform: scale(1.05); /* Ефект збільшення при наведенні */
+}
+
+@media screen and (max-width: 768px) {
+    .grid-item {
+        width: calc(50% - 10px); /* Змінюємо ширину для середніх екранів */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-item {
+        width: 100%; /* Змінюємо ширину для малих екранів */
+    }
 }
