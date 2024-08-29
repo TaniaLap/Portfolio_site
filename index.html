@@ -4,64 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masonry Layout Example</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #282828;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .grid {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .grid-item {
-            margin-bottom: 10px;
-            width: 30%; /* Встановлюємо ширину елемента у відсотках */
-            display: inline-block;
-        }
-
-        .grid-item img {
-            width: 100%;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Підключення CSS -->
 </head>
 <body>
 
-<div class="grid">
-    <div class="grid-item"><img src="https://via.placeholder.com/400x300" alt="Image 1"></div>
-    <div class="grid-item"><img src="https://via.placeholder.com/300x500" alt="Image 2"></div>
-    <div class="grid-item"><img src="https://via.placeholder.com/300x600" alt="Image 3"></div>
-    <div class="grid-item"><img src="https://via.placeholder.com/300x700" alt="Image 4"></div>
-    <div class="grid-item"><img src="https://via.placeholder.com/300x800" alt="Image 5"></div>
-</div>
+    <div class="grid">
+        <div class="grid-item"><img src="images/image1.jpg" alt="Image 1"></div>
+        <div class="grid-item"><img src="images/design2.jpeg" alt="Image 2"></div>
+        <div class="grid-item"><img src="images/circle.jpg" alt="Image 3"></div>
+        <div class="grid-item"><img src="images/boy.jpg" alt="Image 4"></div>
+        <div class="grid-item"><img src="images/pic8.jpg" alt="Image 5"></div>
+        <div class="grid-item"><img src="images/girlblue.jpg" alt="Image 6"></div>
+        <div class="grid-item"><img src="images/design3.jpeg" alt="Image 7"></div>
+        <div class="grid-item"><img src="images/design8.jpg" alt="Image 8"></div>
+        <div class="grid-item"><img src="images/design9.jpg" alt="Image 9"></div>
+        <div class="grid-item"><img src="images/pic6.jpg" alt="Image 10"></div>
+    </div>
 
-<!-- Підключення Masonry та imagesLoaded -->
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var grid = document.querySelector('.grid');
-        
-        imagesLoaded(grid, function() {
-            var msnry = new Masonry(grid, {
-                itemSelector: '.grid-item',
-                percentPosition: true,
-                gutter: 10
-            });
-        });
-    });
-</script>
-
+    <!-- Підключення JavaScript -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="script.js"></script> <!-- Ваш власний JavaScript файл -->
+    
 </body>
 </html>
