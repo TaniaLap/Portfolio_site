@@ -9,12 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Додаємо функціонал для відкриття зображення у великому розмірі
+    // Додаємо функціонал для відкриття іншого зображення при натисканні
     var items = document.querySelectorAll('.grid-item img');
 
     items.forEach(function(item) {
         item.addEventListener('click', function() {
-            var imgSrc = this.src;
+            // Беремо шлях до зображення з атрибута data-large
+            var imgSrc = this.getAttribute('data-large');
             var modal = document.createElement('div');
             modal.style.position = 'fixed';
             modal.style.top = '0';
