@@ -38,3 +38,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+// Функція для зміни тексту логотипу на мобільних пристроях
+function updateLogoText() {
+    // Отримати ширину екрану
+    const screenWidth = window.innerWidth;
+
+    // Отримати елемент логотипу
+    const logo = document.querySelector('.logo');
+
+    // Змінюємо текст логотипу на основі ширини екрану
+    if (screenWidth <= 768) { // Для мобільних пристроїв (менше або рівно 768px)
+        logo.textContent = 'TETI VAIY';
+    } else { // Для великих екранів
+        logo.textContent = 'TETIANA VAITSEKHOVYCH';
+    }
+}
+
+// Викликаємо функцію при завантаженні сторінки
+window.addEventListener('load', updateLogoText);
+
+// Додаємо обробник подій для зміни розміру вікна
+window.addEventListener('resize', updateLogoText);

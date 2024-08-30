@@ -28,7 +28,7 @@ nav.navbar .navbar-nav {
 }
 
 nav.navbar .navbar-nav .nav-item {
-    margin-right: 20px; /* Відступ між пунктами меню */
+    margin-right: 0px; /* Відступ між пунктами меню */
 }
 
 nav.navbar .navbar-nav .nav-item .nav-link {
@@ -45,6 +45,50 @@ nav.navbar .navbar-nav .nav-item .nav-link:hover {
 nav.navbar .navbar-nav .nav-item .nav-link.active {
     font-weight: bold;
     color: #ffffff; /* Колір активного пункту меню */
+}
+
+/* Стилі для кнопки розкриття меню на мобільних пристроях */
+.navbar-toggler {
+    border: none; /* Видалити межі кнопки меню */
+    background: transparent; /* Прозорий фон */
+}
+
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Білий колір для іконки гамбургера */
+    width: 30px; /* Ширина іконки */
+    height: 2px; /* Товщина рисок */
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-toggler-icon::before, .navbar-toggler-icon::after {
+    content: "";
+    background-color: #ffffff; /* Колір рисок */
+    width: 30px; /* Ширина рисок */
+    height: 2px; /* Товщина рисок */
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px; /* Відступ зверху */
+}
+
+.navbar-toggler-icon::after {
+    bottom: -8px; /* Відступ знизу */
+}
+
+/* Стиль для меню при відкритті */
+
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff; /* Білий колір тексту в розкритому меню */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffffff; /* Колір тексту при наведенні в розкритому меню */
 }
 
 body {
@@ -84,8 +128,20 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .grid-item {
-        width: calc(50% - 10px); /* Змінюємо ширину для середніх екранів */
+    .navbar-nav {
+        flex-direction: column; /* Розташування пунктів меню в стовпчик */
+        background-color: #282828; /* Темний фон для мобільного меню */
+    }
+
+  
+
+    .navbar-nav .nav-link {
+        padding: 15px 20px; /* Відступи для пунктів меню */
+        color: #ffffff; /* Білий колір тексту для меню */
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #333333; /* Темніший фон при наведенні */
     }
 }
 
@@ -93,6 +149,7 @@ body {
     .grid-item {
         width: 100%; /* Змінюємо ширину для малих екранів */
     }
+
 }
 
 
@@ -112,7 +169,7 @@ a {
 }
 
 a:hover {
-    color: rgb(79, 79, 79);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -213,16 +270,7 @@ h3 {
     color: white;
 }
 
-.btm-work-link {
-    color: var(--heading-color);
-    border: 1px solid var(--heading-color);
-    transition: all 150ms ease-in-out;
-}
 
-.btm-work-link:hover {
-    background-color: var(--heading-color);
-    color: white;
-}
 
 .email-link {
     display: flex;
