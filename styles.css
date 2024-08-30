@@ -1,12 +1,59 @@
+/* Стили для навігаційного меню */
+nav.navbar {
+    background-color: #282828; /* Сірий фон */
+    padding: 10px 20px; /* Внутрішні відступи для контенту */
+    display: flex; /* Використання flexbox для горизонтального розташування */
+    justify-content: flex-start; /* Вирівнювання елементів по лівій стороні */
+    align-items: center; /* Вирівнювання по вертикалі */
+    width: 100%; /* Займає всю ширину вікна */
+    position: fixed; /* Зафіксувати navbar зверху сторінки */
+    top: 0; /* Розташування зверху */
+    left: 0; /* Прив'язка до лівого краю */
+    z-index: 1000; /* Забезпечує відображення поверх іншого контенту */
+}
+
+nav.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* Колір логотипу (як на скріншоті) */
+    text-decoration: none; /* Вимкнення підкреслення */
+    margin-right: 30px; /* Відступ справа для простору між логотипом та навігаційним меню */
+}
+
+nav.navbar .navbar-nav {
+    display: flex; /* Вирівнювання пунктів меню горизонтально */
+    list-style: none; /* Видалення маркерів списку */
+    margin: 0;
+    padding: 0;
+}
+
+nav.navbar .navbar-nav .nav-item {
+    margin-right: 20px; /* Відступ між пунктами меню */
+}
+
+nav.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 18px;
+    color: #ffffff; /* Колір тексту для посилань в меню (як на скріншоті) */
+    text-decoration: none; /* Вимкнення підкреслення */
+}
+
+nav.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #ffffff; /* Колір тексту при наведенні */
+    text-decoration: none; /* Вимкнення підкреслення при наведенні */
+}
+
+nav.navbar .navbar-nav .nav-item .nav-link.active {
+    font-weight: bold;
+    color: #ffffff; /* Колір активного пункту меню */
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #282828;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
+    padding-top: 60px; /* Додаємо відступ зверху, щоб контент не перекривався navbar */
 }
 
 .grid {
@@ -47,3 +94,178 @@ body {
         width: 100%; /* Змінюємо ширину для малих екранів */
     }
 }
+
+
+
+:root {
+    --primary-color: rgb(201, 160, 66);
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    --secondary-color: #dffaf8;
+    --heading-font-family: "Playfair Display", serif; 
+    --default-font-family: "Poppins", sans-serif;
+    --heading-color: rgb(255, 255, 255);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(79, 79, 79);
+    cursor: pointer;
+}
+
+.content-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.content-container h1 {
+    font-size: 60px;
+    color: var(--heading-color);
+}
+
+.content-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+.content-container h5 {
+    font-size: 24px;
+    color: var(--heading-color);
+}
+
+.content-container p a {
+    color: var(--primary-color);
+}
+
+.content {
+    margin: 30px;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+    cursor: pointer;
+    letter-spacing: 2px;
+    line-height: 60px;
+    text-shadow: rgb(124, 124, 124) 2px 2px 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-right: 60px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: var(--heading-font-family);
+}
+
+h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.btn-fill {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    font-family: var(--default-font-family);
+    padding: 15px 25px;
+    transition: all 150ms ease-in-out;
+    text-decoration: none;
+}
+
+.btn-fill:hover {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.primary-link, .secondary-link, .btm-work-link {
+    border-radius: 4px;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.primary-link {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+}
+
+.primary-link:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.secondary-link {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.secondary-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btm-work-link {
+    color: var(--heading-color);
+    border: 1px solid var(--heading-color);
+    transition: all 150ms ease-in-out;
+}
+
+.btm-work-link:hover {
+    background-color: var(--heading-color);
+    color: white;
+}
+
+.email-link {
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-image: linear-gradient(225deg, #f3efeb 0%, #eadfcd 100%);
+    padding-top: 70px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.project-description {
+    padding: 20px 60px;
+}
+
+footer .social-icons a {
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 24px;
+    margin: 0 0px;
+    padding: 10px;
+    transition: color 0.3s;
+    display: inline-flex; /* Вирівнювання по центру */
+    align-items: center; /* Вирівнювання по центру вертикально */
+    justify-content: center; /* Вирівнювання по центру горизонтально */
+}
+
+
+footer .social-icons a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.text-center.small.mt-4 {
+    color: #ffffff; /* Білий колір для тексту в цьому <p> */
+}
+

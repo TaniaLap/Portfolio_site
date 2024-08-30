@@ -3,28 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masonry Layout Example</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Підключення CSS -->
+    <title>Tetiana Vaitsekhovych - a photo retoucher and graphic designer</title>
+    <!-- Підключення Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Підключення вашого CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
+
+ <!-- Додавання навігації -->
+ <nav class="navbar navbar-expand-md navbar-light p-0" style="background-color: #282828;">
+    <div class="container-fluid">
+        <a class="logo" href="/" title="Homepage">TETIANA VAITSEKHOVYCH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/" title="Homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" title="Contact Teti Vaiy">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
 
     <div class="grid">
         <div class="grid-item"><img src="images/image1.jpg" data-large="images/image1.jpg" alt="Image 1"></div>
         <div class="grid-item"><img src="images/design2.jpeg" data-large="images/design2.jpeg" alt="Image 2"></div>
-        <div class="grid-item"><img src="images/circle.jpg" data-large="images/circle.jpg" alt="Image 3"></div>
+        <div class="grid-item"><img src="images/magazine.jpg" data-large="images/magazine.jpg" alt="Image 3"></div>
         <div class="grid-item"><img src="images/boy.jpg" data-large="images/boy1.jpg" alt="Image 4"></div>
         <div class="grid-item"><img src="images/pic8.jpg" data-large="images/pic8.1.jpg" alt="Image 5"></div>
         <div class="grid-item"><img src="images/girlblue.jpg" data-large="images/girlblue1.jpg" alt="Image 6"></div>
         <div class="grid-item"><img src="images/design3.jpeg" data-large="images/design3.jpeg" alt="Image 7"></div>
-        <div class="grid-item"><img src="images/design8.jpg" data-large="images/design8.jpg" alt="Image 8"></div>
-        <div class="grid-item"><img src="images/design9.jpg" data-large="images/design9.jpg" alt="Image 9"></div>
+      
+        
+       
         <div class="grid-item"><img src="images/pic6.jpg" data-large="images/pic61.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/spa.jpg" data-large="images/spa.1.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/illustr6.jpg" data-large="images/illustr6.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/illustr1.jpg" data-large="images/illustr1.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/illustr5.jpg" data-large="images/illustr5.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/illustr4.jpg" data-large="images/illustr4.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/illustr3.jpg" data-large="images/illustr3.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/illustr2.jpg" data-large="images/illustr2.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/design1.png" data-large="images/design1.png" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/pic10.JPG" data-large="images/pic10.1.JPG" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/design4.jpeg" data-large="images/design4.jpeg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/design5.jpeg" data-large="images/design5.jpeg" alt="Image 10"></div>
+
+        <div class="grid-item"><img src="images/design6.jpg" data-large="images/design6.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/design7.JPG" data-large="images/design7.JPG" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/design8.jpg" data-large="images/design8.jpg" alt="Image 8"></div>
+        <div class="grid-item"><img src="images/ad.JPG" data-large="images/ad.JPG" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/20.jpg" data-large="images/20.1.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/pic16.JPG" data-large="images/pic16.1" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/Dress.jpg" data-large="images/Dress1.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/pic12.JPG" data-large="images/pic12.1.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/circle.jpg" data-large="images/circle.jpg" alt="Image 10"></div>
+        
+        
+        <div class="grid-item"><img src="images/fish.jpg" data-large="images/fish.jpg" alt="Image 10"></div>
+        <div class="grid-item"><img src="images/design9.jpg" data-large="images/design9.jpg" alt="Image 9"></div>
+        <div class="grid-item"><img src="images/rolls.jpg" data-large="images/rolls.1.jpg" alt="Image 10"></div>
     </div>
 
-    <!-- Підключення JavaScript -->
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="script.js"></script> <!-- Ваш власний JavaScript файл -->
-    
+
+<!-- Підключення Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Підключення інших бібліотек -->
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="script.js"></script> <!-- Ваш власний JavaScript файл -->
+
 </body>
 </html>
