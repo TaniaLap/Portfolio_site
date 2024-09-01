@@ -51,34 +51,29 @@ nav.navbar .navbar-nav .nav-item .nav-link.active {
 .navbar-toggler {
     border: none; /* Видалити межі кнопки меню */
     background: transparent; /* Прозорий фон */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.navbar-toggler-icon {
-    background-color: #ffffff; /* Білий колір для іконки гамбургера */
-    width: 30px; /* Ширина іконки */
-    height: 2px; /* Товщина рисок */
-    display: inline-block;
+/* Кастомний стиль для іконки гамбургера */
+.custom-toggler-icon {
+    width: 30px;
+    height: 24px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.navbar-toggler-icon::before, .navbar-toggler-icon::after {
-    content: "";
-    background-color: #ffffff; /* Колір рисок */
-    width: 30px; /* Ширина рисок */
+.custom-toggler-icon div {
+    width: 100%;
     height: 2px; /* Товщина рисок */
-    display: block;
-    position: absolute;
-    left: 0;
+    background-color: #ffffff; /* Білий колір для полосок */
 }
 
-.navbar-toggler-icon::before {
-    top: -8px; /* Відступ зверху */
-}
 
-.navbar-toggler-icon::after {
-    bottom: -8px; /* Відступ знизу */
-}
 
 /* Стиль для меню при відкритті */
 
