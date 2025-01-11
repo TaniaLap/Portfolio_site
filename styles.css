@@ -290,6 +290,24 @@ h3 {
     padding: 20px 60px;
 }
 
+.description {
+    color: white;
+}
+.btm-work-link {
+    border-radius: 4px;
+    text-decoration: none;
+  
+    color: rgb(201, 160, 66);
+    border: 1px solid rgb(201, 160, 66);
+  
+    padding: 15px 25px;
+    transition: all 150ms ease-in-out;
+  }
+  .btm-work-link:hover {
+    background-color: rgb(201, 160, 66);
+    color: white;
+    cursor: pointer;
+  }
 footer .social-icons a {
     border-radius: 50%;
     color: var(--primary-color);
@@ -303,6 +321,7 @@ footer .social-icons a {
 }
 
 
+
 footer .social-icons a:hover {
     background-color: var(--primary-color);
     color: white;
@@ -312,3 +331,7 @@ footer .social-icons a:hover {
     color: #ffffff; /* Білий колір для тексту в цьому <p> */
 }
 
+.content-container img {
+    width: 900px; /* Встановлюємо ширину в 900px */
+    height: auto; /* Пропорційна висота */
+  }
