@@ -175,7 +175,7 @@ a:hover {
 
 .content-container h1 {
     font-size: 60px;
-    color: var(--heading-color);
+    color: rgb(201, 160, 66);
 }
 
 .content-container h2 {
