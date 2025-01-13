@@ -192,11 +192,16 @@ a:hover {
 
 .content-container h5 {
     font-size: 24px;
-    color: var(--heading-color);
+    color: white;
 }
 
 .content-container p a {
     color: var(--primary-color);
+}
+
+.text {
+    text-align: left;
+    margin-top: 30px;
 }
 
 .content {
@@ -317,7 +322,7 @@ h3 {
   }
 footer .social-icons a {
     border-radius: 50%;
-    color: var(--primary-color);
+    color: rgb(201, 160, 66);
     font-size: 24px;
     margin: 0 0px;
     padding: 10px;
@@ -330,7 +335,7 @@ footer .social-icons a {
 
 
 footer .social-icons a:hover {
-    background-color: var(--primary-color);
+    background-color: rgb(201, 160, 66);
     color: white;
 }
 
@@ -342,3 +347,31 @@ footer .social-icons a:hover {
     width: 800px; /* Встановлюємо ширину в 800px */
     height: auto; /* Пропорційна висота */
   }
+
+
+
+p {
+    color: white 
+}
+
+/* Стилі, що застосовуються тільки до .about-page */
+.about-page .content {
+    display: flex;
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: space-between; /* Простір між елементами */
+    margin: 30px;
+}
+
+.about-page .col-lg-6 img {
+    max-width: 100%; /* Встановлюємо максимальну ширину */
+    height: auto; /* Пропорційна висота */
+    width: 400px; /* Фіксована ширина */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-icon i, .linkedin-icon i {
+    font-size: 40px; /* Задаємо бажаний розмір для іконок */
+    margin-right: 20px; /* Збільшення відстані між іконками */
+    
+}
