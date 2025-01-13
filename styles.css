@@ -218,7 +218,7 @@ a:hover {
 
 h1, h2, h3 {
     margin: 0;
-    font-family: var(--heading-font-family);
+    font-family: Montserrat, sans-serif;
 
 }
 
