@@ -147,6 +147,12 @@ body {
 
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+}
+
 
 
 :root {
@@ -213,6 +219,7 @@ a:hover {
 h1, h2, h3 {
     margin: 0;
     font-family: var(--heading-font-family);
+
 }
 
 h3 {
