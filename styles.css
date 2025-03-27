@@ -375,7 +375,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.instagram-icon i, .linkedin-icon i {
+.instagram-icon i, .linkedin-icon i, .github-icon i {
     font-size: 40px; /* Задаємо бажаний розмір для іконок */
     margin-right: 20px; /* Збільшення відстані між іконками */
     
