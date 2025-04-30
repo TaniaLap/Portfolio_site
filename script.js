@@ -1,21 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var grid = document.querySelector('.grid');
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.body.classList.contains("index-page")) {
+        var grid = document.querySelector(".grid");
+        if (grid) {
+            imagesLoaded(grid, function () {
+                var msnry = new Masonry(grid, {
+                    itemSelector: ".grid-item",
+                    percentPosition: true,
+                    gutter: 10
+                });
+            });
+        }
+    }
 
-    imagesLoaded(grid, function() {
-        var msnry = new Masonry(grid, {
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            gutter: 10
-        });
-    });
-
-    // Додаємо функціонал для відкриття іншого зображення при натисканні
+    // Цей блок працює для всіх сторінок (і index, і uxui)
     var items = document.querySelectorAll('.grid-item img');
-
-    items.forEach(function(item) {
-        item.addEventListener('click', function() {
-            // Беремо шлях до зображення з атрибута data-large
+    items.forEach(function (item) {
+        item.addEventListener('click', function () {
             var imgSrc = this.getAttribute('data-large');
+            if (!imgSrc) return;
             var modal = document.createElement('div');
             modal.style.position = 'fixed';
             modal.style.top = '0';
@@ -28,16 +30,14 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.alignItems = 'center';
             modal.style.cursor = 'pointer';
             modal.innerHTML = '<img src="' + imgSrc + '" style="max-width: 90%; max-height: 90%; border-radius: 8px;">';
-
-            // Закриття модального вікна при натисканні
-            modal.addEventListener('click', function() {
+            modal.addEventListener('click', function () {
                 document.body.removeChild(modal);
             });
-
             document.body.appendChild(modal);
         });
     });
 });
+
 
 
 

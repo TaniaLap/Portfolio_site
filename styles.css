@@ -98,9 +98,8 @@ body {
 
 
 .grid {
-    /* width: 100%;
-    
-    margin: 0 auto;*/
+ 
+
     width: 100%;
     max-width: 1500px; /* Змінено максимальну ширину галереї */
     margin: 0 auto;
@@ -109,17 +108,19 @@ body {
    
 }
 
-.grid-item {
+.index-page .grid-item {
+
     
-    /*
-    width: calc(33.333% - 10px);
-    margin-bottom: 10px;
-    display: inline-block;
-    cursor: pointer;  Додаємо вказівник */
     margin-bottom: 10px;
     display: inline-block;
     width: calc(33.333% - 20px); /* Зменшення простору між елементами */
     cursor: pointer; /* Додаємо вказівник */
+}
+
+.uxui-page .grid-item {
+   
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .grid-item img {
