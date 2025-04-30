@@ -95,23 +95,40 @@ body {
     padding-top: 60px; /* Додаємо відступ зверху, щоб контент не перекривався navbar */
 }
 
+
+
 .grid {
+    /* width: 100%;
+    
+    margin: 0 auto;*/
     width: 100%;
-    /* max-width: 1500px;  Змінено максимальну ширину галереї */
+    max-width: 1500px; /* Змінено максимальну ширину галереї */
     margin: 0 auto;
-   /* padding: 10px;
-    box-sizing: border-box; */
+    padding: 10px;
+    box-sizing: border-box;
+   
 }
 
 .grid-item {
     
+    /*
     width: calc(33.333% - 10px);
     margin-bottom: 10px;
     display: inline-block;
+    cursor: pointer;  Додаємо вказівник */
+    margin-bottom: 10px;
+    display: inline-block;
+    width: calc(33.333% - 20px); /* Зменшення простору між елементами */
     cursor: pointer; /* Додаємо вказівник */
 }
 
 .grid-item img {
+    /*
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;  Додаємо анімацію при наведенні */
     width: 100%;
     display: block;
     border-radius: 8px;
@@ -121,8 +138,9 @@ body {
 
 .grid-item img:hover {
     transform: scale(1.05);
+    /*
     position: relative;
-    z-index: 10; /* Ефект збільшення при наведенні */
+    z-index: 10;  Ефект збільшення при наведенні */
 }
 
 @media screen and (max-width: 768px) {
