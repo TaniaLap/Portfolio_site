@@ -105,8 +105,7 @@ body {
 
 .grid-item {
     margin-bottom: 10px;
-    display: inline-block;
-    width: calc(33.333% - 20px); /* Зменшення простору між елементами */
+    
     cursor: pointer; /* Додаємо вказівник */
 }
 
