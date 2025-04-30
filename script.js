@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-   
+    var grid = document.querySelector('.grid');
+
+    imagesLoaded(grid, function() {
+        var msnry = new Masonry(grid, {
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            gutter: 10
+        });
+    });
 
     // Додаємо функціонал для відкриття іншого зображення при натисканні
     var items = document.querySelectorAll('.grid-item img');

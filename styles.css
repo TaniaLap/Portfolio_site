@@ -97,15 +97,17 @@ body {
 
 .grid {
     width: 100%;
-    max-width: 1500px; /* Змінено максимальну ширину галереї */
+    /* max-width: 1500px;  Змінено максимальну ширину галереї */
     margin: 0 auto;
-    padding: 10px;
-    box-sizing: border-box;
+   /* padding: 10px;
+    box-sizing: border-box; */
 }
 
 .grid-item {
-    margin-bottom: 10px;
     
+    width: calc(33.333% - 10px);
+    margin-bottom: 10px;
+    display: inline-block;
     cursor: pointer; /* Додаємо вказівник */
 }
 
@@ -118,7 +120,9 @@ body {
 }
 
 .grid-item img:hover {
-    transform: scale(1.05); /* Ефект збільшення при наведенні */
+    transform: scale(1.05);
+    position: relative;
+    z-index: 10; /* Ефект збільшення при наведенні */
 }
 
 @media screen and (max-width: 768px) {
