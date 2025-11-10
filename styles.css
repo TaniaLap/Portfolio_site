@@ -402,3 +402,33 @@ p {
     margin-right: 20px; /* Збільшення відстані між іконками */
     
 }
+
+
+/* Тільки для сторінки Graphic Design */
+.graphic-page .content-container {
+  padding: 0 !important;
+  display: flex;
+  justify-content: center; /* центрує контент */
+}
+
+.graphic-page .projects-list.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* центрує всі зображення */
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+.graphic-page .projects-list .grid-item {
+  width: 100%;
+  max-width: 1400px;        /* обмеж ширину фото по центру, якщо потрібно */
+}
+
+.graphic-page .projects-list img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
