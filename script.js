@@ -64,3 +64,36 @@ function updateLogoText() {
 }
 window.addEventListener('load', updateLogoText);
 window.addEventListener('resize', updateLogoText);
+
+
+// Модалка для ВІДЕО
+var videos = document.querySelectorAll('.grid-item video');
+videos.forEach(function (video) {
+    video.addEventListener('click', function () {
+        var src = this.getAttribute('data-large');
+        if (!src) return;
+
+        var modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100%';
+        modal.style.height = '100%';
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        modal.style.display = 'flex';
+        modal.style.justifyContent = 'center';
+        modal.style.alignItems = 'center';
+        modal.style.cursor = 'pointer';
+
+        modal.innerHTML =
+          '<video src="' + src + '" ' +
+          'style="max-width:90%; max-height:90%; border-radius:8px;" ' +
+          'controls autoplay muted playsinline loop></video>';
+
+        modal.addEventListener('click', function () {
+            document.body.removeChild(modal);
+        });
+
+        document.body.appendChild(modal);
+    });
+});
