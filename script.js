@@ -62,3 +62,8 @@ window.addEventListener('load', updateLogoText);
 
 // Додаємо обробник подій для зміни розміру вікна
 window.addEventListener('resize', updateLogoText);
+
+// після ініціалізації Masonry (коли у тебе вже є var msnry = new Masonry(...);)
+document.querySelectorAll('.grid-item video').forEach(function (v) {
+  v.addEventListener('loadedmetadata', function () { msnry.layout(); }, { once: true });
+});
