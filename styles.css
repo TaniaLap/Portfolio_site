@@ -394,7 +394,7 @@ p {
     height: auto; /* Пропорційна висота */
     width: 400px; /* Фіксована ширина */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
 }
 
 .instagram-icon i, .linkedin-icon i, .github-icon i {
