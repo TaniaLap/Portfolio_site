@@ -189,8 +189,7 @@ document.querySelectorAll('.grid-item video').forEach(function (video) {
       <video
         src="${src}"
         controls
-        autoplay
-        muted
+        
         playsinline
         style="max-width:90%; max-height:90%; border-radius:12px;"
       ></video>
