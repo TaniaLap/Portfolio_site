@@ -41,12 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* =========================
      СТАРА МОДАЛКА ДЛЯ IMG
-     (НЕ чіпає long-case)
      ========================= */
   document.querySelectorAll(".grid-item img").forEach(function (item) {
     item.addEventListener("click", function () {
 
-      // ❗ ВАЖЛИВО: long-case пропускаємо
       if (this.classList.contains("long-case")) return;
 
       var imgSrc = this.getAttribute("data-large");
@@ -93,13 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.innerHTML = `
         <img
           src="${src}"
-          style="
-            display:block;
-            width:100%;
-            max-width:1400px;
-            margin:40px auto;
-            height:auto;
-          "
+          style="display:block;width:100%;max-width:1400px;margin:40px auto;height:auto;"
         />
       `;
 
@@ -112,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =========================
-     ВІДЕО (без змін)
+     ВІДЕО через кнопку
      ========================= */
   document.querySelectorAll(".open-video").forEach(function (el) {
     el.addEventListener("click", function (e) {
@@ -141,6 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
         ></video>
       `;
 
+      // ✅ FIX — дозволяємо кліки по відео
+      modal.querySelector("video").addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+
       modal.addEventListener("click", function () {
         document.body.removeChild(modal);
       });
@@ -151,17 +148,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =========================
-   LOGO — без змін
+   LOGO
    ========================= */
 function updateLogoText() {
   const logo = document.querySelector(".logo");
   if (!logo) return;
-  const screenWidth = window.innerWidth;
-  logo.textContent = (screenWidth <= 768)
+  logo.textContent = (window.innerWidth <= 768)
     ? "TETI VAIY"
     : "TETIANA VAITSEKHOVYCH";
 }
-
 window.addEventListener("load", updateLogoText);
 window.addEventListener("resize", updateLogoText);
 
@@ -189,11 +184,15 @@ document.querySelectorAll('.grid-item video').forEach(function (video) {
       <video
         src="${src}"
         controls
-        
         playsinline
         style="max-width:90%; max-height:90%; border-radius:12px;"
       ></video>
     `;
+
+    // ✅ FIX — дозволяємо користуватись відео
+    modal.querySelector("video").addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
 
     modal.addEventListener('click', function () {
       document.body.removeChild(modal);
@@ -205,7 +204,7 @@ document.querySelectorAll('.grid-item video').forEach(function (video) {
 
 
 /* =========================
-   Для відкриття проєкту через кнопку  в Graphic Design
+   КНОПКА → КАРТИНКА
    ========================= */
 document.querySelectorAll(".open-image").forEach(function (btn) {
   btn.addEventListener("click", function (e) {
@@ -225,13 +224,7 @@ document.querySelectorAll(".open-image").forEach(function (btn) {
     modal.innerHTML = `
       <img
         src="${src}"
-        style="
-          display:block;
-          width:100%;
-          max-width:1400px;
-          margin:40px auto;
-          height:auto;
-        "
+        style="display:block;width:100%;max-width:1400px;margin:40px auto;height:auto;"
       />
     `;
 
